@@ -1,0 +1,10 @@
+<h1>Editing friend list</h1>
+
+<%= render 'form' , friend_list: @friend_list %>
+
+<br>
+
+<div>
+  <%= link_to "Show this friend list", @friend_list , class:"btn btn-secondary btn-sm" %> |
+  <%= link_to "Back to friend lists", friend_lists_path , class:"btn btn-warning btn-sm" %>
+</div>

@@ -1,0 +1,98 @@
+<p style="color: green"></p>
+<%if user_signed_in?%>
+<h1>Friend list</h1>
+
+<div id="friend_lists">
+  <table class="table table-hover table-bordered">
+    <thead class="thead-dark">
+<tr>
+  <p><th>
+    <strong>First name</strong>
+    
+  </p></th>
+
+  <p><th>
+    <strong>Last name</strong>
+  
+  </p></th>
+
+  <p><th>
+    <strong>Email</strong>
+    
+  </p></th>
+
+  <p><th>
+    <strong>Phone</strong>
+    
+  </p></th>
+
+  <p><th>
+    <strong>Insta</strong>
+    
+  </p></th>
+  <p><th>
+    <strong></strong>
+  </p></th>
+  <p> <th> 
+    <strong>User Id</strong> 
+  </th> </p>
+
+  </tr>
+<tbody>
+  <% @friend_lists.each do |friend_list| %>
+  <tr>
+      <td><%= friend_list.first_name %></td>
+      <td><%= friend_list.last_name %></td>
+      <td><%= friend_list.email %></td>
+      <td><%= friend_list.phone %></td>
+      <td><%= friend_list.insta %></td>
+      <td><%= link_to "Show", friend_list %></td>
+      <td><%= friend_list.user_id %></td>
+    </tr>
+    
+
+    
+   
+    <% render friend_list %>
+    
+    <% end %>
+</tbody>
+</table>
+
+</div>
+
+<!--<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>-->
+
+<%= link_to "New friend list", new_friend_list_path, class:"btn btn-secondary btn-sm" %>
+<% else %>
+<h1>HELLO WORLD!</h1>
+<h2>this is my first rails webpage</h2>
+<% end %>

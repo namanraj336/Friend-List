@@ -1,0 +1,49 @@
+<div id="<%= dom_id friend_list %>">
+  <table class="table table-hover table-bordered">
+  <thead class="thead-dark">
+<!--<tr>
+  <p><th>
+    <strong>First name</strong>
+    
+  </p></th>
+
+  <p><th>
+    <strong>Last name</strong>
+  
+  </p></th>
+
+  <p><th>
+    <strong>Email</strong>
+    
+  </p></th>
+
+  <p><th>
+    <strong>Phone</strong>
+    
+  </p></th>
+
+  <p><th>
+    <strong>Insta</strong>
+    
+  </p></th>
+  <p><th>
+    <strong></strong>
+  </p></th>
+
+  </tr>-->
+  <tbody>
+    <tr>
+      <td><%= friend_list.first_name %></td>
+      <td><%= friend_list.last_name %></td>
+      <td><%= friend_list.email %></td>
+      <td><%= friend_list.phone %></td>
+      <td><%= friend_list.insta %></td>
+      <td><%= friend_list.user_id %></td>
+      <td><%= link_to "Show", friend_list %></td>
+    </tr>
+    
+
+  </tbody>
+  </table>
+
+</div>
